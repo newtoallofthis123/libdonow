@@ -22,9 +22,8 @@
 //!
 //! let mut t = Todo::new("x (A) 2024-08-15 2024-09-20 Hello World +hello @wow due:123");
 //! t.fill().unwrap();
-//! println!("{}", t.parse_project().unwrap());
-//! println!("{}", t.parse_context().unwrap());
-//! println!("{}");
+//! println!("{}", t.parse_project().unwrap().unwrap());
+//! println!("{}", t.parse_context().unwrap().unwrap());
 //! ```
 
 use std::{fmt::Display, str::FromStr};
@@ -46,8 +45,8 @@ use hashbrown::HashMap;
 /// ```rust
 /// use libdonow::parser::Todo;
 ///
-/// let mut t = Todo::parse("x (A) 2024-08-15 2024-09-20 Hello World +hello @wow due:123").unwarp();
-/// println!("{}", t.parse_project().unwrap());
+/// let mut t = Todo::parse("x (A) 2024-08-15 2024-09-20 Hello World +hello @wow due:123").unwrap();
+/// println!("{}", t.parse_project().unwrap().unwrap());
 /// ```
 #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 pub struct Todo {
