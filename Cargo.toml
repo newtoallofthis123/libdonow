@@ -2,6 +2,12 @@
 name = "libdonow"
 version = "0.1.0"
 edition = "2021"
+license="MIT"
+description="A library for parsing and manipulating todo.txt files efficiently using regex"
+repository="https://github.com/newtoallofthis123/libdonow"
+authors = ["NoobScience <ishan@noobscience.in>"]
+readme="README.md"
+homepage="https://noobscience.in/projects/libdonow"
 
 [dependencies]
 chrono = { version = "0.4.38", features= ["serde"] }
